@@ -1,2 +1,2 @@
-# Hackathon2
-Second Hackathon at Developers Institute
+# Connect4thon
+My second hackathon at Developers Institute

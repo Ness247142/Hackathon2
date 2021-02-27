@@ -121,7 +121,7 @@ def final_score(board, coin):  # FUNCTION to check if the final score of 4 is fu
             window = col_array[row:row + WINDOW_LENGTH]
             score += score_evaluation(window, coin)
 
-    for row in range(ROW_COUNT-3):     # Check the score for postive slopes combinations
+    for row in range(ROW_COUNT-3):     # Check the score for positive slopes combinations
         for column in range(COLUMN_COUNT-3):
             window = [board[row+i][column+i]
                       for i in range(WINDOW_LENGTH)]
@@ -246,7 +246,8 @@ screen = pygame.display.set_mode(screen_size)  # Set the size of the screen
 draw_board(board)
 pygame.display.update()
 
-myfont = pygame.font.SysFont("monospace", 80)  # Initialize a font
+# Initialize a font for the message that appears to declare the winner
+myfont = pygame.font.SysFont("monospace", 80)
 
 pygame.mixer.init()
 pygame.mixer.music.load("Wii Music - Background Music.mp3")
@@ -347,7 +348,7 @@ obj = {
 with open("board.json", "w") as f:  # Convert obj into a json file
     json.dump(obj, f)
 
-with open('board.json', 'r') as f:  # Read obj into a json file
+with open("board.json", "r") as f:  # Read obj into a json file
     thing = json.load(f)
 print(thing)
 

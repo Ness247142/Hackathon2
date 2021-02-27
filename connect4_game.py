@@ -306,7 +306,7 @@ while not running:  # Main Loop that runs as long as running is 'False'. When ru
                     draw_board(board)
 
     if turn == AI and not running:  # IF CONDITIONAL, if the game is not over, then the AI keeps playing until there is a winner
-        col, minimax_score = minimax(board, 5, -math.inf, math.inf, True)
+        col, minimax_score = minimax(board, 6, -math.inf, math.inf, True)
 
         if valid_location(board, col):
             row = empty_slot(board, col)
